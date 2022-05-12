@@ -1,0 +1,36 @@
+<ion-app>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <div class="toolbar">
+        <div *ngIf="hasBackButton" class="button-container">
+          <ion-button fill="clear" routerLink="/main-menu">
+            <ion-icon name="arrow-back-outline" size="large"></ion-icon>
+          </ion-button>
+        </div>
+        <div *ngIf="!hasBackButton" class="logo-container">
+          <img width="40" alt="Intensea Logo" src="assets/icon/intensea.png" />
+        </div>
+        <div class="title-container">
+          <ion-title class="title">
+            {{ title }}
+          </ion-title>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Intensea</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- OK pour les routages avec Electron -->
+      <ion-router-outlet (activate)="logTitle($event)"></ion-router-outlet>
+
+    <!--
+    <app-home (titleReady)="logTitle('ddd')"></app-home>
+    -->
+  </ion-content>
+</ion-app>

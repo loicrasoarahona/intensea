@@ -1,0 +1,48 @@
+
+  
+  <ion-content>
+    <ion-slides #slide pager="true" [options]="slideOpts" (ionSlideDidChange)="updateTexteBouton(slide)">
+      <ion-slide>
+        <img style="height: 400px;" src="assets/images/diapo_exemple/creme-glacee.png">
+      </ion-slide>
+      <ion-slide>
+        <img style="height: 100px;" src="assets/images/diapo_exemple/plus.png">
+      </ion-slide>
+      <ion-slide>
+        <div style="width: 100%;display: flex; justify-content: space-around;">
+          <div style="">
+            <img style="height: 400px;" src="assets/images/diapo_exemple/tapped-creme-glacee.png">
+          </div>
+          <div>
+            <img style="height: 300px;" src="assets/images/diapo_exemple/lampe-de-bureau.png">
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div style="width: 100%;display: flex; justify-content: space-around;">
+          <div style="">
+            <img style="height: 350px;" src="assets/images/diapo_exemple/creme-glacee.png">
+          </div>
+          <div style="">
+            <img style="height: 100px;" src="assets/images/diapo_exemple/check.png">
+          </div>
+          <div>
+            <img style="height: 300px;" src="assets/images/diapo_exemple/lampe-de-bureau.png">
+          </div>
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+  </ion-content>
+  <div style="display: flex; justify-content: space-between;">
+    <div>
+      <button (click)="onSlidePrev(slide)" [disabled]="disable_bt_precedent" class="btn btn-secondary bouton">{{
+        label_precedent }}</button>
+    </div>
+    <div>
+      <button (click)="onSlideNext(slide)" class="btn btn-secondary bouton">{{ label_suivant }}</button>
+    </div>
+  </div>
+  <div style="background-color: black; height: 100%; position: absolute;">
+    
+  </div>

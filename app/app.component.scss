@@ -1,0 +1,22 @@
+
+$toolbarMargin: 0.8em;
+.toolbar{
+  padding: $toolbarMargin;
+  .button-container, .logo-container, .title-container{
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .button-container, .logo-container{
+    width: 5rem;
+    text-align: center;
+  }
+  .icon-container{
+    display: inline-block;
+    font-size: 4em;
+  }
+
+  .title-container{
+    line-height: 3rem;
+  }
+}

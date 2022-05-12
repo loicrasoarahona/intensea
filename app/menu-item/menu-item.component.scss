@@ -1,0 +1,19 @@
+
+$menuItemHeight: 3.8em;
+$menuItemFontSize: 1.1rem;
+.menu-item{
+  margin: 1em;
+  padding-left: 10em;
+  padding-right: 10em;
+  height: $menuItemHeight;
+  font-size: $menuItemFontSize;
+  .card-icon{
+    display: inline-block;
+    width: auto;
+    float: left;
+    svg{
+      fill: white;
+      margin-right: 1em;
+    }
+  }
+}

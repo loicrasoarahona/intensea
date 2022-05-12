@@ -1,0 +1,44 @@
+<br><br>
+<div class="content">
+  <div style="display: flex; flex-direction:column;">
+    <div class="col-12 col-md-6 col-lg-4" style="margin:auto;">
+      <form>
+        <div class="form-group">
+          <label class="form-control-label">
+            Lieu:
+          </label>
+          <br>
+          <button type="button" class="btn btn-outline-light bt-lieu" (click)="putLieu('Hopital')">Hopital</button>
+          <button type="button" class="btn btn-outline-light bt-lieu" (click)="putLieu('Ecole')">Ecole</button>
+          <input type="hidden" [ngModel]="lieu">
+        </div>
+        <br>
+        <div class="form-group">
+          <label class="form-control-label">
+            Genre:
+          </label>
+          <br>
+          <button type="button" class="btn btn-outline-light bt-genre" (click)="putGenre('Homme')">Homme</button>
+          <button type="button" class="btn btn-outline-light bt-genre" (click)="putGenre('Femme')">Femme</button>
+          <input type="hidden" [ngModel]="genre">
+        </div>
+        <br>
+        <div class="form-group">
+          <label class="form-control-label">
+            Id:
+          </label>
+          <input type="text" class="form-control" [ngModel]="id">
+        </div>
+        <br>
+        <div class="form-group">
+          <label class="form-control-label">
+            Date de naissance:
+          </label>
+          <input type="date" class="form-control" [ngModel]="dateNaissance">
+        </div>
+      </form>
+      <br>
+      <button class="btn btn-validate btn-secondary" (click)="onValider()">Valider</button>
+    </div>
+  </div>
+</div>

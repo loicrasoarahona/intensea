@@ -1,0 +1,55 @@
+<!-- PRESENTATION -->
+<div id="presentation" [hidden]="currentPage != 'presentation'">
+  <h2 style="text-align: center;">Voici l'image à retenir</h2>
+  <br><br>
+  <div
+    style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); ;">
+    <div style="display: flex; justify-content: space-around; ;">
+      <div *ngFor="let retenir of imagesRetenir"
+        style="background-color: rgb(220, 220, 220); padding: 20px; border-radius: 15px; margin:10px ;">
+        <img width="150" src="assets/images/Practice/{{ retenir.nom }}" style="margin: auto;">
+      </div>
+    </div>
+  </div>
+  <br>
+  <h2 style="text-align: center;">Passage à la grille dans {{ decompteAff }} secondes...</h2>
+</div>
+
+<!-- CROIX DE FIXATION -->
+<div id="croix_fixation" [hidden]="currentPage != 'croix_fixation'">
+  <div
+    style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); ;">
+    <img style="margin: auto;" width="100" src="assets/images/diapo_exemple/plus.png">
+  </div>
+</div>
+
+<!--LA GRILLE -->
+<div [hidden]="imageComplet == false"
+  style="height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0); position: absolute; ;">
+  <canvas width="1920" height="900" id="canvas" style="width: 100%; height: 100%; margin: auto; position: absolute;">
+    <img id="point_blanc" src="assets/images/diapo_exemple/point.png">
+  </canvas>
+</div>
+
+<!-- TUILES -->
+<div id="jeu" [hidden]="currentPage != 'jeu'">
+  <div
+    style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 75%;">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <app-tuile *ngFor="let filename of imagesDistractor" [path]="'assets/images/Practice/' + filename.nom"
+        [id]='filename.id' [image]="filename" [borderStyle]="'tsy'"></app-tuile>
+    </div>
+  </div>
+</div>
+
+<!-- FIN -->
+<div id="fin" [hidden]="currentPage != 'fin'">*
+      <br><br><br>
+      <h3 style="font-size: 40px; text-align: center;" >Fin de l'entrainement</h3>
+</div>
+
+<div [hidden]="imageComplet == false || currentPage=='fin'"
+  style="height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0); position: absolute; ;">
+  <canvas width="1920" height="900" id="canvas2"
+    style="width: 100%; height: 100%; margin: auto; position: absolute; display: block;"></canvas>
+</div>

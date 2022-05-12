@@ -1,0 +1,15 @@
+
+<div style="display: flex; flex-direction: column; align-items: center; margin-top: 40px;" >
+  <div style="margin: 15px;" >
+    <button (click)="router.navigateByUrl('/ecran-chargement?sortie=formulaire-utilisateur');" class="btn" style="background-color: rgb(197,224,180); font-size: 20px; width: 300px; height: 85px; color: white; border-radius: 13px;">MEMOIRE</button>
+  </div>
+  <div style="margin: 15px;">
+    <button (click)="router.navigate(['sous-menu'], {queryParams: {section: 'attention'}});" class="btn" style="background-color: rgb(169, 209, 142); font-size: 20px; width: 300px; height: 85px; color: white; border-radius: 13px;">ATTENTION</button>
+  </div>
+  <div style="margin: 15px;">
+    <button (click)="router.navigate(['sous-menu'], {queryParams: {section: 'sensoriel'}});" class="btn" style="background-color: rgb(84, 130, 53); font-size: 20px; width: 300px; height: 85px; color: white; border-radius: 13px;">SENSORIEL</button>
+  </div>
+  <div style="margin: 15px;">
+    <button (click)="router.navigate(['sous-menu'], {queryParams: {section: 'questionnaire'}});" class="btn" style="background-color: rgb(56, 87, 35); font-size: 20px; width: 300px; height: 85px; color: white; border-radius: 13px;">QUESTIONNAIRE</button>
+  </div>
+</div>

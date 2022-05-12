@@ -1,0 +1,5 @@
+<div style="display : flex; flex-direction: column; align-items: center; margin-top: 40px;" >
+  <div *ngFor="let item of items" style="margin: 15px;">
+    <app-menu-item [display]="item.label" [color]="color" [link]="item.url" ></app-menu-item>
+  </div>
+</div>

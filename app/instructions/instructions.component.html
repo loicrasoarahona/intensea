@@ -1,0 +1,11 @@
+<div (click)="onPageSuivant()" style="display: flex; height: 100%; flex-direction: column; align-items: center; justify-content: space-around;">
+
+  <div [hidden]="listePage[page]!='page1'" id="page1" class="center" style="">
+    <p class="paragraphe">Bonjour et bienvenue à l'étude InTEnSeA<br>Un grand merci pour ta participation</p>
+  </div>
+
+  <div [hidden]="listePage[page]!='page2'" id="page2">
+    <p class="paragraphe">Pour cette tâche, tu vas voir apparaître une ou plusieurs images<br>Tu dois la mémoriser<br>Ensuite tu devras retrouver l'image parmi d'autres images<br>Clique sur ESPACE pour voir un petit exemple</p>
+  </div>
+
+</div>
